@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Add Crop</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="shortcut icon" sizes="196x196" href="images/icon.png" />
+        <link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+    </head>
+
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header">
+              <button onclick="location.href = 'index.html';" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">arrow_back</i>
+              </button>
+            <div class="mdl-layout__header-row">
+              <span class="mdl-layout-title" id="headerBarTitle">Add Crop  <img width="26px" height="26px" src="https://www.iconsdb.com/icons/preview/white/wheat-xxl.png"></span>
+            </div>
+          </header>
+          <main id="main" class="mdl-layout__content">
+            <div class="container">
+                <!--   Main page content here:   -->
+                <h5>Name of Crop</h5>
+
+                <div class="row">
+                  <form action="#">
+                    <div class="col-25">
+                      <label for="cropName">Name</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="cropName" placeholder="Name of Crop...">
+                    </div>
+                  </form>
+                </div>
+
+                <div class="row">
+                  <form action="#">
+                    <div class="col-25">
+                      <label for="season">Seasons</label>
+                    </div>
+                    <div class="col-75">
+                      <select id="seasons" name="season">
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Autumn">Autumn</option>
+                        <option value="Winter">Winter</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <br>
+                <h5>Safe Temperature Range (°C)</h5>
+
+                <div class="row">
+                  <form id="minTempForm" action="#">
+                    <div class="col-25">
+                      <label for="minTemp">Minimum Temperature</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="minTemp" placeholder="Minimum Temperature...">
+                    </div>
+                  </form>
+                </div>
+
+                <div class="row">
+                  <form id="maxTempForm" action="#">
+                    <div class="col-25">
+                      <label for="maxTemp">Maximum Temperature</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="maxTemp" placeholder="Maximum Temperature...">
+                    </div>
+                  </form>
+                </div>
+
+                <div class="row">
+                  <form id="lowYieldForm" action="#">
+                    <div class="col-25">
+                      <label for="lowYieldOffset">Low Yield Offset (°C)</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="lowYieldOffset" placeholder="Low Yield Offset...">
+                    </div>
+                  </form>
+                </div>
+
+                <div class="row">
+                  <form id="toleranceForm" action="#">
+                    <div class="col-25">
+                      <label for="toleranceDay">Tolerance (Days)</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="toleranceDay" placeholder="Tolerance...">
+                    </div>
+                  </form>
+                </div>
+                <br>
+
+                <div class="row">
+                  <input id="button" type="submit" value="Add Crop" onclick = "addCrop()"></input>
+                </div>
+
+                  <!-- Toast Message -->
+                  <div id="toast" class="mdl-js-snackbar mdl-snackbar">
+                  <div class="mdl-snackbar__text"></div>
+                      <button class="mdl-snackbar__action" type="button"></button>
+                  </div>
+
+                  <br><br><br>
+			       </div>
+          </main>
+        </div>
+
+        <!--   JavaScript files:   -->
+        <script src="js/dateExtensions.js"></script>
+        <script src="js/shared.js"></script>
+        <script src="js/addCropPage.js"></script>
+    </body>
+</html>

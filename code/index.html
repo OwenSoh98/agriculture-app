@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Locations and Crops List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="shortcut icon" sizes="196x196" href="images/icon.png" />
+        <link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+    </head>
+
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+              <span class="mdl-layout-title" id="headerBarTitle">CropBook</span>
+              <div class="mdl-layout-spacer"></div>
+              <button onclick="location.href = 'addCrop.html';" class="button">
+                +
+              <img width="26px" height="26px" src="https://www.iconsdb.com/icons/preview/white/wheat-xxl.png">
+              </button>
+			        <button onclick="location.href = 'addLocation.html';" class="button">
+                +
+                <img width="26px" height="26px" src="https://www.iconsdb.com/icons/preview/white/map-marker-xxl.png">
+              </button>
+            </div>
+          </header>
+
+          <main class="container">
+            <!--   Main page content here:   -->
+
+            <ul class="mdl-list" id="locationList">
+              <h5 class="myHeader">Locations List</h5>
+                <div class="output" id = "addLocationHere"></div>
+      			  <h5 class="myHeader">Crops List</h5>
+                <table id="cropList"></table>
+
+              <!-- Toast Message -->
+              <div id="toast" class="mdl-js-snackbar mdl-snackbar">
+              <div class="mdl-snackbar__text"></div>
+                  <button class="mdl-snackbar__action" type="button"></button>
+              </div>
+
+            </ul>
+            <!--   End sample locations list.   -->
+          </main>
+        </div>
+
+        <!--   JavaScript files:   -->
+        <script src="js/dateExtensions.js"></script>
+        <script src="js/shared.js"></script>
+        <script src="js/mainPage.js"></script>
+    </body>
+</html>
